@@ -7,6 +7,7 @@
  */
  require_once dirname(__DIR__) . '/config/init.php';
  require_once LIBS . '/functions.php';
+ require_once CONFIG . '/routes.php';
 
  new \ishop\App();
 
@@ -15,3 +16,6 @@
 
 //тест на вывод ошибок
 //throw new Exception('Страница не найдена!!!', 500);
+
+//тест на маршруты
+//myDebug(\ishop\Router::getRoutes());
