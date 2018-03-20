@@ -10,4 +10,8 @@
 
  new \ishop\App();
 
-myDebug(\ishop\App::$app->getProperties());
+//тест на дебаг
+//myDebug(\ishop\App::$app->getProperties());
+
+//тест на вывод ошибок
+//throw new Exception('Страница не найдена!!!', 500);
