@@ -6,3 +6,8 @@
  * Time: 22:22
  */
  require_once dirname(__DIR__) . '/config/init.php';
+ require_once LIBS . '/functions.php';
+
+ new \ishop\App();
+
+myDebug(\ishop\App::$app->getProperties());
