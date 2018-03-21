@@ -14,8 +14,6 @@ use ishop\base\Controller;
 
 class AppController extends Controller
 {
-    public function indexAction(){
-        echo __METHOD__;
-    }
+
 
 }
