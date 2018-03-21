@@ -7,3 +7,12 @@
  */
 
  echo 'Это индекс';
+ echo '<br>';
+ //myDebug($rt);
+ //echo print_r($posts);
+ ?>
+
+<?php foreach($posts as $post): ?>
+    <h3><?=$post->title;?></h3>
+<?php endforeach;?>
+
