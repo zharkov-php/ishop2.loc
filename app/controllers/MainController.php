@@ -10,8 +10,13 @@ namespace app\controllers;
 
 
 use app\controllers\AppController;
+use ishop\App;
 
 class MainController extends AppController
 {
+    public function indexAction(){
+       // echo __METHOD__;
+        $this->setMeta(App::$app->getProperty('shop_name'), 'описание страницы', 'ключевики');
+    }
 
 }
