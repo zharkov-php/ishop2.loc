@@ -11,5 +11,14 @@
 <h1>Мой шаблон по умолчанию</h1>
 
 <?= $content; ?>
+
+<?php
+$logs = \R::getDatabaseAdapter()
+    ->getDatabase()
+    ->getLogger();
+
+myDebug( $logs->grep( 'SELECT' ) );
+?>
+
 </body>
 </html>

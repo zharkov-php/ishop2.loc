@@ -15,8 +15,13 @@ use ishop\App;
 class MainController extends AppController
 {
     public function indexAction(){
+        $posts = \R::findAll('test');
+        $post = \R::findOne('test', 'id = ?', [3]);
        // echo __METHOD__;
         $this->setMeta(App::$app->getProperty('shop_name'), 'описание страницы', 'ключевики');
+        $this->set(compact('posts'));
+
+
     }
 
 }
