@@ -16,9 +16,10 @@ use ishop\Cache;
 class MainController extends AppController
 {
     public function indexAction(){
-
+    $brands = \R::find('brand', 'LIMIT 3');
+    //myDebug($brands);
         $this->setMeta(App::$app->getProperty('shop_name'), 'описание страницы', 'ключевики');
-
+        $this->set(compact('brands'));
 
 
     }
