@@ -1,7 +1,13 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
 <html>
 <head>
-    <?= $this->getMeta(); ?>
+    <?=$this->getMeta();?>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!--Custom-Theme-files-->
     <!--theme-style-->
@@ -11,7 +17,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!--start-menu-->
     <link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
-
 </head>
 <body>
 <!--top-header-->
@@ -54,13 +59,11 @@
     </div>
 </div>
 <!--top-header-->
-
 <!--start-logo-->
 <div class="logo">
     <a href="index.html"><h1>Luxury Watches</h1></a>
 </div>
 <!--start-logo-->
-
 <!--bottom-header-->
 <div class="header-bottom">
     <div class="container">
@@ -217,7 +220,9 @@
 </div>
 <!--bottom-header-->
 
-<?= $content?>
+<div class="content">
+    <?=$content;?>
+</div>
 
 <!--information-starts-->
 <div class="information">
@@ -264,7 +269,6 @@
     </div>
 </div>
 <!--information-end-->
-
 <!--footer-starts-->
 <div class="footer">
     <div class="container">
@@ -282,9 +286,10 @@
         </div>
     </div>
 </div>
+<!--footer-end-->
 <script src="js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="js/memenu.js"></script>
 <script src="js/simpleCart.min.js"> </script>
+<script type="text/javascript" src="js/memenu.js"></script>
 <script>$(document).ready(function(){$(".memenu").memenu();});</script>
 <!--dropdown-->
 <script src="js/jquery.easydropdown.js"></script>
@@ -310,7 +315,7 @@
 
     });
 </script>
+<script src="js/main.js"></script>
 <!--End-slider-script-->
-<!--footer-end-->
 </body>
 </html>
