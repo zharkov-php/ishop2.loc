@@ -21,15 +21,13 @@ class AppController extends Controller
     public function __construct($route){
         parent::__construct($route);
         new AppModel();
-<<<<<<< HEAD
+
         App::$app->setProperty('currencies', Currency::getCurrencies());
         App::$app->setProperty('currency', Currency::getCurrency(App::$app->getProperty('currencies')));
-=======
+
         setcookie('currency', 'EUR', time() + 3600*24*7, '/');
-        App::$app->setProperty('currencies', Currency::getCurrencies());
-        App::$app->setProperty('currency', Currency::getCurrency(App::$app->getProperty('currencies')));
-        myDebug(App::$app->getProperties());
->>>>>>> CarrencyWidget
+
+
     }
 
 
