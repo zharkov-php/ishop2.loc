@@ -8,17 +8,17 @@
     <?=$this->getMeta();?>
 </head>
 <body>
-<h1>Мой шаблон по умолчанию</h1>
 
-<?= $content; ?>
+<h1>Шаблон DEFAULT</h1>
+
+<?=$content;?>
 
 <?php
 $logs = \R::getDatabaseAdapter()
     ->getDatabase()
     ->getLogger();
 
-myDebug( $logs->grep( 'SELECT' ) );
+debug( $logs->grep( 'SELECT' ) );
 ?>
-
 </body>
 </html>
