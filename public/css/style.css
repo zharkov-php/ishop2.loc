@@ -299,7 +299,7 @@ span.simpleCart_total {
 	height: 0;
 	left: 13px;
 	right: 0;
-	top: 36px;
+	top: 27px;
 	background: #73B6E1;
 	overflow: hidden;
 	opacity: 0;
@@ -3075,4 +3075,12 @@ ul.tag-men {
 	margin-top: 3em;
 	margin-right: 10px;
 	float: left;
+}
+
+#cart table img{
+	height: 50px;
+}
+
+.del-item{
+	cursor: pointer;
 }

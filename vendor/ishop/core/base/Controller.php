@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: A0297
- * Date: 21.03.2018
- * Time: 18:02
- */
 
 namespace ishop\base;
-
 
 abstract class Controller{
 
@@ -20,8 +13,7 @@ abstract class Controller{
     public $data = [];
     public $meta = ['title' => '', 'desc' => '', 'keywords' => ''];
 
-    public function __construct($route)
-    {
+    public function __construct($route){
         $this->route = $route;
         $this->controller = $route['controller'];
         $this->model = $route['controller'];
@@ -43,4 +35,15 @@ abstract class Controller{
         $this->meta['desc'] = $desc;
         $this->meta['keywords'] = $keywords;
     }
+
+    public function isAjax() {
+        return isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'] === 'XMLHttpRequest';
+    }
+
+    public function loadView($view, $vars = []){
+        extract($vars);
+        require APP . "/views/{$this->prefix}{$this->controller}/{$view}.php";
+        die;
+    }
+
 }
