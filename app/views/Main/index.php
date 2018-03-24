@@ -1,4 +1,3 @@
-
 <!--banner-starts-->
 <div class="bnr" id="home">
     <div  id="top" class="callbacks_container">
@@ -18,58 +17,55 @@
 </div>
 <!--banner-ends-->
 
-
-<?php if($brands):  ?>
 <!--about-starts-->
+<?php if($brands): ?>
 <div class="about">
     <div class="container">
         <div class="about-top grid-1">
-
-        <?php foreach($brands as $brand): ?>
-            <div class="col-md-4 about-left">
+            <?php foreach($brands as $brand): ?>
+                <div class="col-md-4 about-left">
                 <figure class="effect-bubba">
                     <img class="img-responsive" src="images/<?=$brand->img;?>" alt=""/>
                     <figcaption>
-                        <h4><?=$brand->title;?></h4>
+                        <h2><?=$brand->title;?></h2>
                         <p><?=$brand->description;?></p>
                     </figcaption>
                 </figure>
             </div>
-        <?php endforeach ; ?>
-
+            <?php endforeach; ?>
             <div class="clearfix"></div>
         </div>
     </div>
 </div>
-<!--about-end-->
 <?php endif; ?>
-
+<!--about-end-->
 <!--product-starts-->
 <?php if($hits): ?>
+<?php $curr = \ishop\App::$app->getProperty('currency'); ?>
 <div class="product">
     <div class="container">
         <div class="product-top">
             <div class="product-one">
-    <?php foreach ($hits as $hit): ?>
+            <?php foreach($hits as $hit): ?>
                 <div class="col-md-3 product-left">
                     <div class="product-main simpleCart_shelfItem">
-                        <a href="product/<?=$hit->alias;  ?>" class="mask"><img class="img-responsive zoom-img" src="images/<?=$hit->img; ?>" alt="" /></a>
+                        <a href="product/<?=$hit->alias;?>" class="mask"><img class="img-responsive zoom-img" src="images/<?=$hit->img;?>" alt="" /></a>
                         <div class="product-bottom">
-                            <h3><?=$hit->title; ?></h3>
-                            <p><?=$hit->description; ?></p>
-                            <h4><a class="add-to-cart-link" href="cart/add?=<?=$hit->id; ?>"><i></i></a> <span class=" item_price">$ <?=$hit->price; ?></span></h4>
+                            <h3><a href="product/<?=$hit->alias;?>"><?=$hit->title;?></a></h3>
+                            <p>Explore Now</p>
+                            <h4>
+                                <a class="add-to-cart-link" href="cart/add?id=<?=$hit->id;?>"><i></i></a> <span class=" item_price"><?=$curr['symbol_left'];?><?=$hit->price * $curr['value'];?><?=$curr['symbol_right'];?></span>
+                            <?php if($hit->old_price): ?>
+                                <small><del><?=$curr['symbol_left'];?><?=$hit->old_price * $curr['value'];?><?=$curr['symbol_right'];?></del></small>
+                            <?php endif; ?>
+                            </h4>
                         </div>
-    <?php if($hit->old_price): ?>
-    <small><del>Старая Цена: <?=$hit->old_price ;  ?></del></small>
-    <?php endif;?>
-
                         <div class="srch">
                             <span>-50%</span>
                         </div>
                     </div>
                 </div>
-
-<?php endforeach ; ?>
+            <?php endforeach; ?>
                 <div class="clearfix"></div>
             </div>
         </div>
