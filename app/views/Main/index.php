@@ -1,4 +1,3 @@
-
 <!--banner-starts-->
 <div class="bnr" id="home">
     <div  id="top" class="callbacks_container">
