@@ -10,7 +10,7 @@ function myDebug($arr){
     echo print_r($arr, 'true');
     echo '<pre>';
 }
-function redirectMy($http = false){
+function redirect($http = false){
     if($http){
         $redirect = $http;
     }else{

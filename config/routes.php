@@ -1,13 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: A0297
- * Date: 20.03.2018
- * Time: 22:02
- */
 
 use ishop\Router;
 
+Router::add('^product/(?P<alias>[a-z0-9-]+)/?$', ['controller' => 'Product', 'action' => 'view']);
 
 // default routes
 Router::add('^admin$', ['controller' => 'Main', 'action' => 'index', 'prefix' => 'admin']);
