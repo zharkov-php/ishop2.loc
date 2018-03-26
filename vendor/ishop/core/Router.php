@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: A0297
- * Date: 20.03.2018
- * Time: 22:03
- */
 
 namespace ishop;
-
 
 class Router{
 
@@ -17,6 +10,7 @@ class Router{
     public static function add($regexp, $route = []){
         self::$routes[$regexp] = $route;
     }
+
     public static function getRoutes(){
         return self::$routes;
     }
@@ -48,7 +42,7 @@ class Router{
 
     public static function matchRoute($url){
         foreach(self::$routes as $pattern => $route){
-            if(preg_match("#{$pattern}#", $url, $matches)){
+            if(preg_match("#{$pattern}#i", $url, $matches)){
                 foreach($matches as $k => $v){
                     if(is_string($k)){
                         $route[$k] = $v;
@@ -80,7 +74,6 @@ class Router{
         return lcfirst(self::upperCamelCase($name));
     }
 
-
     protected static function removeQueryString($url){
         if($url){
             $params = explode('&', $url, 2);
@@ -91,6 +84,5 @@ class Router{
             }
         }
     }
-
 
 }
