@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: A0297
- * Date: 20.03.2018
- * Time: 18:08
- */
 
 namespace ishop;
-
 
 trait TSingletone{
 
