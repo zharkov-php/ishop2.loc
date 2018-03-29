@@ -287,7 +287,7 @@ $logs = \R::getDatabaseAdapter()
     ->getDatabase()
     ->getLogger();
 
-debug( $logs->grep( 'SELECT' ) );
+myDebug( $logs->grep( 'SELECT' ) );
 ?>
 </body>
 </html>
