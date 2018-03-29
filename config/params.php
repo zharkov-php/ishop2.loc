@@ -11,9 +11,11 @@ return [
     'pagination' => 3,
     'smtp_host' => 'smtp.ukr.net',
     'smtp_port' => '465',
-    'smtp_login' => '',
-    'smtp_password' => '',
     'smtp_protocol' => 'ssl',
     'smtp_login' => 'zharkov.php@ukr.net',
     'smtp_password' => 'byblik2016',
+    'img_width' => 125,
+    'img_height' => 200,
+    'gallery_width' => 700,
+    'gallery_height' => 1000,
 ];
